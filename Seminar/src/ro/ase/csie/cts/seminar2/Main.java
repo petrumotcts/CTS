@@ -1,21 +1,17 @@
 package ro.ase.csie.cts.seminar2;
 
+import java.math.BigDecimal;
+
+import ro.ase.csie.cts.seminar2.solid.BankAccount;
+import ro.ase.csie.cts.seminar2.solid.Person;
+
 public class Main {
 
 	public static void main(String[] args) {
-		CalendarUtil cu = new CalendarUtil();
 		
-		try {
-			
-			System.out.println(cu.weekdDay(4));
-			System.out.println(cu.weekDay2(3));
-			System.out.println(cu.weekDay3(2));
-			System.out.println(cu.weekDay4(2));
-			
-			
-		} catch (IncorectDayException e) {
-			System.out.println(e.getMessage());
-		}
+		
+		Person p = new Person("Petru");
+		BankAccount account = new BankAccount("INGB123242342", p);
 
 
 	}
