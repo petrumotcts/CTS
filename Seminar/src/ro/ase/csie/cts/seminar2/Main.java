@@ -1,6 +1,8 @@
 package ro.ase.csie.cts.seminar2;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 import ro.ase.csie.cts.seminar2.solid.BankAccount;
 import ro.ase.csie.cts.seminar2.solid.FeeBankAccount;
@@ -38,7 +40,10 @@ public class Main {
 			System.out.println(e.getMessage());
 		}
 		
+		
 		System.out.println(account.getBalance());
+		
+		System.out.println();
 		
 
 

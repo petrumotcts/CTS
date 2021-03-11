@@ -1,4 +1,4 @@
-package ro.ase.csie.cts.seminar2.solid;
+package ro.ase.csie.cts.seminar3;
 
 public class FeeBankAccount extends BankAccount {
 	
