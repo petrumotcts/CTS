@@ -3,28 +3,41 @@ package ro.ase.csie.cts.seminar4.banking;
 import java.util.Date;
 
 public class Person {
-	
+
 	private String name;
-	
+
 	private String address;
-	
+
 	private Date birthDate;
-	
+
 	private Integer age;
-	
+
 	private long salary;
-	
+
 	private String email;
-	
+
 	private String mobile;
-	
+
 	private NotificationType notificationType;
-	
+
 	public static enum NotificationType {
-		EMAIL,
+		EMAIL {
+			@Override
+			public NotificationService getNotificationService() {
+				return new EmailNotificationService();
+			}
+		},
 		SMS
+		{
+			@Override
+			public NotificationService getNotificationService() {
+				return new SMSNotificationService();
+			}
+		};
+
+		public abstract NotificationService getNotificationService();
 	}
-	
+
 	public Person(String name) {
 		this.name = name;
 	}
